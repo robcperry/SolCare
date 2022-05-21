@@ -1,0 +1,276 @@
+Delivered-To: rcperry37@gmail.com
+Received: by 2002:a50:cd5b:0:b0:425:c00a:7c0b with SMTP id d27csp716388edj;
+        Fri, 13 May 2022 18:39:58 -0700 (PDT)
+X-Received: by 2002:a17:90b:1b03:b0:1dc:a80b:8004 with SMTP id nu3-20020a17090b1b0300b001dca80b8004mr18777454pjb.182.1652492398091;
+        Fri, 13 May 2022 18:39:58 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1652492398; cv=none;
+        d=google.com; s=arc-20160816;
+        b=w+Tcu+TDLScodP5ajxUHlIap7hFsxeGAW+gi42Uw8AJkzEIXkrX8ItCuXYonA6T5uM
+         ixrqbEkdLeKGiKBiMczjb8cu/ikGeyBW8fDQYY/isbIrMk62a8DjzR0ZOpVysjyzBN35
+         I+Glf0QJJY++4FuQEA70alGSuIqCkrTAhXpkogY9C/i5FZdt+82CuwdkhFgaxCh6sBRU
+         cB0sZH6EOhwMyysGqMk/QIGvYHqqospLF8vyGnwKFmxC8+6kWGI0MWHWjF7x2y3jYXsr
+         qzIPKDchAUNo2TCtYlDaWec3nDQkNbo2KuAEY8j829PpxloJuFv780MUtXfSYmVxdlmZ
+         eHlA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=6kkkt/xzQEGhgBHFvP4mljToIXx8rKQzwXaIb7jzV5Q=;
+        b=yDPqEmZUHrhmd5boxIRD+AwE8F5JDzEWsAodOv8VabxQXDsYnXw9AuItqSlx4K5MTX
+         matGxzCzjSNHbcqRRDZL2uuETu1fyqbkq53F0obuF3EQI6kALxJtLHX6TemPgUoDvghE
+         F1EPQ6y03pBkQsVxdJMapQy66iwOiAnZG9rmvgrzWFde8AOJfdYqwZwMBaliIjSE3ppj
+         0N70h3pofZSaNCXWP4BQsNota83LhgJYR+ZPGQtZDQ6OJW8vzyuw7QtkcOGAeF69VxtW
+         egpYNkDeFFZT1L6XWQxUwnrLJrsV7OYtxjnihUGtlOv4YeJArkZRln6Xo0uL98PcAeGM
+         67lw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20210112 header.b=L+a5zKvU;
+       spf=pass (google.com: domain of solcare2021@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=solcare2021@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <solcare2021@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id b15-20020a170903228f00b0015a3e8dfba0sor1857570plh.39.2022.05.13.18.39.57
+        for <rcperry37@gmail.com>
+        (Google Transport Security);
+        Fri, 13 May 2022 18:39:58 -0700 (PDT)
+Received-SPF: pass (google.com: domain of solcare2021@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20210112 header.b=L+a5zKvU;
+       spf=pass (google.com: domain of solcare2021@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=solcare2021@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20210112;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=6kkkt/xzQEGhgBHFvP4mljToIXx8rKQzwXaIb7jzV5Q=;
+        b=L+a5zKvUH4Ds30yvLnfyJ2tG/rmYGrAhuqtalzl+UAN9YPQn7X3TDfjJTZWPSldkgg
+         Ze9fCAiMGMp+s+UFd1vFrSyUaYw4kchQR26AIhWsA83TxBm5u4dYLbM5ct2DlzLRRfai
+         m8Q/EAlRL4m1jGsur+cJ9YfAeqvWN320nGn01rY8/KW6c++JbaZ/ojl/taZsYJCi7MKa
+         blsWLZ882NwCDxw730wJDFEeMz98eaD/Q1shoyqoCwdPp9EGCEt7MJN9XILizc8dGGQJ
+         03N1LrQz+vTs1+fBvxrUSbcpiXtaHS9VtWXn+bbR/ZtdEDu2oOtMN3kiuybBVP6nwoXp
+         10aA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=6kkkt/xzQEGhgBHFvP4mljToIXx8rKQzwXaIb7jzV5Q=;
+        b=3F7Zq9ygnhPs1jRRY69Kp7q6QieD37FSy9C22t0NpvJ/rh4f8vzFd6TvgbkknOgvkw
+         Fc5AqHfQkUJMS568oZi0hgkKBCmpuU6NmTSuHaeTdsW+TP+Wz5M4DXTBPo8lgQzGHRs1
+         MvbmLPsoMmTL8V6S8DvC/OaJOuaAuDdGs5mqNhWdoSsiwABcwVBsZ0QX/csprdzjo3cY
+         9BZaKjdwL7s1dgEMPkMKv0STdxpxRX+Cw8DMAPnzqi3LlVBnMKcQ6yOxqt6KTl7Ak8V2
+         gLWckFpuVBqjnlibgBX5CiVZxywoO5qandvRqRt9woCbeXhH38np9mHCiRYv0PJs1KYh
+         CNfA==
+X-Gm-Message-State: AOAM530N4QDXdlOUYUpMujG4JwKfgjFokDy0Xd9G9xahqVS4XJzNC9f0
+	/GlTQ2rf3jP0Jyv5bpoi2wZXZbKeBHV5w43X1fpriZZY
+X-Google-Smtp-Source: ABdhPJz/yDAiHTDfvtwA/evzjcrge/7va4mkisoYrapcKBMvwL3wKTHSaD5jxQHKip9jc34IwEtvaZk6IXZPM/WVNM8=
+X-Received: by 2002:a17:902:bcc6:b0:15e:e60e:f3e8 with SMTP id
+ o6-20020a170902bcc600b0015ee60ef3e8mr7352808pls.174.1652492397202; Fri, 13
+ May 2022 18:39:57 -0700 (PDT)
+MIME-Version: 1.0
+References: <37475E62-6894-4003-9707-E9D72B8D2B7E@gmail.com>
+ <CABooeNCtk50hSHnO-D8x7qAOsKgx_B3sy1PzL17HuobA-1PFsA@mail.gmail.com>
+ <56547E9A-C651-4BF8-B64F-F453834AE073@gmail.com> <CABooeNDRVd8hzcxHAFLtRTMW_a7b97mM2iPGUhXiGtArYpuDLg@mail.gmail.com>
+In-Reply-To: <CABooeNDRVd8hzcxHAFLtRTMW_a7b97mM2iPGUhXiGtArYpuDLg@mail.gmail.com>
+From: Soleil Harris <solcare2021@gmail.com>
+Date: Fri, 13 May 2022 21:39:43 -0400
+Message-ID: <CABooeNCf9QaxjC6EC=Dx-Qs4N7CN340gQogNutWghZktkfnC_A@mail.gmail.com>
+Subject: Re: Web Update - SolCare
+To: Robert Perry <rcperry37@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000544f4b05deeede76"
+
+--000000000000544f4b05deeede76
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+=E2=97=8FUnlock Inner Beauty-
+Mind+ Body+ Spirit=3D Soulcare
+
+Shining from your core allows your crown to glow.  It's more than just
+"looking good" to the eye, concerning the outer.  When you care for the
+body as a wholistic approach the body knows and everything else tends to
+follow.
+
+=E2=97=8F Discover and Embrace Your Rootz
+
+Overstanding how our body and scalp feeds off of what foods, products we
+intake and use regularly.  Lifestyle choices and our active or unactive
+lives, play a large role in results as well.  Workout Tips, Pro Advice and
+Group Fitness
+
+=E2=97=8FRegime and Routine Care
+
+Following the script is key.  For this is what yields optimum level of care
+and again Real Results.  If you listen closely your hair and scalp talks.
+Being insightful and in touch with your hair truly aids in the adorning
+process!  You are kings and queens!  Take back your crown!
+
+
+
+
+On Fri, May 13, 2022, 9:05 PM Soleil Harris <solcare2021@gmail.com> wrote:
+
+> You're literally the best.  This site and your ideas are brilliant...Let
+> me know tomorrow what you think the three points should be.  I will take =
+a
+> look at the sites to see if ideas can be pulled together from there.
+>
+> Sincere thanks,
+>
+>
+>
+> Soleil
+>
+> On Fri, May 13, 2022, 7:08 PM Robert Perry <rcperry37@gmail.com> wrote:
+>
+>> Hey Soleil,
+>>
+>> I=E2=80=99ve been researching local natural hair stylists and their webs=
+ites to
+>> get a feel for the type of web presence we will, be up against.
+>>
+>> https://www.hcnaturalhair.com/
+>>
+>> https://www.wfnaturalhairsalon.com/
+>>
+>>
+>> http://www.tajisalon.com/
+>>
+>>
+>>
+>>
+>> Here is a link to the progress I have made so far =E2=80=94=E2=80=94>
+>> https://solcare.netlify.app/
+>>
+>> I plan to have the banner at the top loop through 3 different stock
+>> footage videos of natural hair models
+>>
+>> I need the =E2=80=9C3 tiers=E2=80=9D or bullet points to use as quick se=
+lling points.
+>>
+>> I believe this site will out preform these examples I=E2=80=99ve found. =
+Also, I
+>> have to figure out how to hook your booking service into it.
+>>
+>>
+>>
+>>
+>>
+>> See you tomorrow!
+>>
+>>
+>>
+>>
+>> On Apr 28, 2022, at 11:17 AM, Soleil Harris <solcare2021@gmail.com>
+>> wrote:
+>>
+>> Rob,
+>>
+>> Good morning.  Thank you for the proposal.  I have signed and sent back
+>> to you the pdf thank you so much and look forward to working with you
+>> and your team in completing this project.
+>>
+>> On Tue, Apr 26, 2022, 9:49 PM Robert Perry <rcperry37@gmail.com> wrote:
+>>
+>>> Soleil -
+>>>
+>>> I=E2=80=99ve attached the proposal and contract for the new website. Th=
+e
+>>> timeline for completion I=E2=80=99ve proposed has room built in to acco=
+unt for the
+>>> features we decide to implement. Let me know if you have any questions.
+>>>
+>>> Thanks,
+>>>
+>>> Rob
+>>>
+>>>
+>>
+
+--000000000000544f4b05deeede76
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto"><div>=E2=97=8FUnlock Inner Beauty-=C2=A0</div><div dir=3D=
+"auto">Mind+ Body+ Spirit=3D Soulcare</div><div dir=3D"auto"><br></div><div=
+ dir=3D"auto">Shining from your core allows your crown to glow.=C2=A0 It&#3=
+9;s more than just &quot;looking good&quot; to the eye, concerning the oute=
+r.=C2=A0 When you care for the body as a wholistic approach the body knows =
+and everything else tends to follow.</div><div dir=3D"auto"><br></div><div =
+dir=3D"auto">=E2=97=8F Discover and Embrace Your Rootz=C2=A0</div><div dir=
+=3D"auto"><br></div><div dir=3D"auto">Overstanding how our body and scalp f=
+eeds off of what foods, products we intake and use regularly.=C2=A0 Lifesty=
+le choices and our active or unactive lives, play a large role in results a=
+s well.=C2=A0 Workout Tips, Pro Advice and Group Fitness=C2=A0</div><div di=
+r=3D"auto"><br></div><div dir=3D"auto">=E2=97=8FRegime and Routine Care</di=
+v><div dir=3D"auto"><br></div><div dir=3D"auto">Following the script is key=
+.=C2=A0 For this is what yields optimum level of care and again Real Result=
+s.=C2=A0 If you listen closely your hair and scalp talks.=C2=A0 Being insig=
+htful and in touch with your hair truly aids in the adorning process!=C2=A0=
+ You are kings and queens!=C2=A0 Take back your crown!</div><div dir=3D"aut=
+o"><br></div><div dir=3D"auto"><br></div><div dir=3D"auto"><br><br><div cla=
+ss=3D"gmail_quote" dir=3D"auto"><div dir=3D"ltr" class=3D"gmail_attr">On Fr=
+i, May 13, 2022, 9:05 PM Soleil Harris &lt;<a href=3D"mailto:solcare2021@gm=
+ail.com" rel=3D"noreferrer noreferrer noreferrer" target=3D"_blank">solcare=
+2021@gmail.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" st=
+yle=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div =
+dir=3D"auto"><div>You&#39;re literally the best.=C2=A0 This site and your i=
+deas are brilliant...Let me know tomorrow what you think the three points s=
+hould be.=C2=A0 I will take a look at the sites to see if ideas can be pull=
+ed together from=C2=A0there.</div><div dir=3D"auto"><br></div><div dir=3D"a=
+uto">Sincere thanks,</div><div dir=3D"auto"><br></div><div dir=3D"auto"><br=
+></div><div dir=3D"auto"><br></div><div dir=3D"auto">Soleil<br><br><div cla=
+ss=3D"gmail_quote" dir=3D"auto"><div dir=3D"ltr" class=3D"gmail_attr">On Fr=
+i, May 13, 2022, 7:08 PM Robert Perry &lt;<a href=3D"mailto:rcperry37@gmail=
+.com" rel=3D"noreferrer noreferrer noreferrer noreferrer" target=3D"_blank"=
+>rcperry37@gmail.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quo=
+te" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"=
+><div style=3D"word-wrap:break-word;line-break:after-white-space"><div>Hey =
+Soleil,</div><div><br></div><div>I=E2=80=99ve been researching local natura=
+l hair stylists and their websites to get a feel for the type of web presen=
+ce we will, be up against.</div><div><br></div><div><a href=3D"https://www.=
+hcnaturalhair.com/" rel=3D"noreferrer noreferrer noreferrer noreferrer nore=
+ferrer" target=3D"_blank">https://www.hcnaturalhair.com/</a></div><div><br>=
+</div><div><a href=3D"https://www.wfnaturalhairsalon.com/" rel=3D"noreferre=
+r noreferrer noreferrer noreferrer noreferrer" target=3D"_blank">https://ww=
+w.wfnaturalhairsalon.com/</a></div><div><br></div><div><br></div><div><a hr=
+ef=3D"http://www.tajisalon.com/" rel=3D"noreferrer noreferrer noreferrer no=
+referrer noreferrer" target=3D"_blank">http://www.tajisalon.com/</a></div><=
+div><br></div><div><br></div><div><br></div><div><br></div><div>Here is a l=
+ink to the progress I have made so far =E2=80=94=E2=80=94&gt;=C2=A0<a href=
+=3D"https://solcare.netlify.app/" rel=3D"noreferrer noreferrer noreferrer n=
+oreferrer noreferrer" target=3D"_blank">https://solcare.netlify.app/</a></d=
+iv><div><br></div><div>I plan to have the banner at the top loop through 3 =
+different stock footage videos of natural hair models</div><div><br></div><=
+div>I need the =E2=80=9C3 tiers=E2=80=9D or bullet points to use as quick s=
+elling points.</div><div><br></div><div>I believe this site will out prefor=
+m these examples I=E2=80=99ve found. Also, I have to figure out how to hook=
+ your booking service into it.</div><div><br></div><div><br></div><br><div>=
+<br></div><div><br></div><div>
+<div>See you tomorrow!</div><div><br></div><div><br></div><br>
+
+</div>
+<div><br><blockquote type=3D"cite"><div>On Apr 28, 2022, at 11:17 AM, Solei=
+l Harris &lt;<a href=3D"mailto:solcare2021@gmail.com" rel=3D"noreferrer nor=
+eferrer noreferrer noreferrer noreferrer" target=3D"_blank">solcare2021@gma=
+il.com</a>&gt; wrote:</div><br><div><div dir=3D"auto">Rob,<div dir=3D"auto"=
+><br></div><div dir=3D"auto">Good morning.=C2=A0 Thank you for the proposal=
+.=C2=A0 I have signed and sent back to you the pdf thank you so much and lo=
+ok forward to working with you and=C2=A0your team in completing=C2=A0this p=
+roject.</div></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D=
+"gmail_attr">On Tue, Apr 26, 2022, 9:49 PM Robert Perry &lt;<a href=3D"mail=
+to:rcperry37@gmail.com" rel=3D"noreferrer noreferrer noreferrer noreferrer =
+noreferrer" target=3D"_blank">rcperry37@gmail.com</a>&gt; wrote:<br></div><=
+blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px=
+ #ccc solid;padding-left:1ex">Soleil - <br>
+<br>
+I=E2=80=99ve attached the proposal and contract for the new website. The ti=
+meline for completion I=E2=80=99ve proposed has room built in to account fo=
+r the features we decide to implement. Let me know if you have any question=
+s. <br>
+<br>
+Thanks,<br>
+<br>
+Rob <br>
+<br>
+</blockquote></div>
+</div></blockquote></div><br></div></blockquote></div></div></div>
+</blockquote></div></div></div>
+
+--000000000000544f4b05deeede76--
