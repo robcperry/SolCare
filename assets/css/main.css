@@ -1840,6 +1840,7 @@ input, select, textarea {
 		text-transform: uppercase;
 		white-space: nowrap;
 	}
+	
 
 		input[type="submit"].icon,
 		input[type="reset"].icon,
@@ -2390,13 +2391,14 @@ input, select, textarea {
 		display: inline-block;
 		position: relative;
 	}
-
+		
 		.image img {
 			display: block;
+			
 		}
 
 		.image.left, .image.right {
-			max-width: 40%;
+			max-width: 20%;
 		}
 
 			.image.left img, .image.right img {
@@ -2425,15 +2427,14 @@ input, select, textarea {
 				width: 100%;
 			}
 
-		.image.main {
+		.image img.main {
 			display: block;
-			margin: 0 0 3em 0;
-			width: 100%;
+			margin: 0 0 3em 5em;
+			width: 65% !important;
 		}
 
-			.image.main img {
-				width: 100%;
-			}
+		
+
 
 /* List */
 
@@ -2807,6 +2808,7 @@ input, select, textarea {
 			-webkit-flex-grow: 1;
 			-ms-flex-grow: 1;
 			flex-grow: 1;
+			
 		}
 
 		@media screen and (max-width: 1280px) {
@@ -3898,6 +3900,7 @@ input, select, textarea {
 							text-transform: none !important;
 							font-family: 'Font Awesome 5 Free';
 							font-weight: 900;
+							text-decoration: none;
 						}
 
 						#header nav > ul > li a:before {
@@ -4624,4 +4627,25 @@ input, select, textarea {
 					padding: 2.25em 1.25em;
 				}
 
+		}
+
+		a{ 
+			
+			text-decoration: none; 
+		
+		}
+
+
+		a:visited { text-decoration: none; }
+		
+		a::before { text-decoration: none; }
+		
+		a:hover { text-decoration: none; }
+		
+		
+		a:active { text-decoration: none; }
+		
+		a, a:active, a:focus,a:before{
+			outline: none; 
+			text-decoration: none; 
 		}
